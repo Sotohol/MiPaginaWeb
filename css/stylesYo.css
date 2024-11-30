@@ -1,0 +1,183 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #111111, #1A1A1A); /* Fondo degradado oscuro */
+    color: #FDC500; /* Amarillo Batman */
+    line-height: 1.8;
+}
+
+/* Contenedor principal */
+.cv-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #222222, #2C2C2C); /* Fondo degradado moderno */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    border: 2px solid #FDC500; /* Borde amarillo */
+}
+
+/* Encabezado del CV */
+.cv-header {
+    background: linear-gradient(135deg, #333333, #444444); /* Fondo degradado */
+    color: #FDC500;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.cv-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.cv-header p {
+    font-size: 1.4rem;
+    color: #DDDDDD; /* Gris claro */
+}
+
+.nombre-link {
+    color: #FDC500;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.nombre-link:hover {
+    color: #FFFFFF; /* Blanco para hover */
+    text-decoration: underline;
+}
+
+/* Perfil */
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #FDC500; /* Borde amarillo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+}
+
+/* Títulos */
+h2 {
+    color: #FDC500;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FDC500; /* Línea decorativa */
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #EEEEEE;
+    margin-bottom: 10px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #DDDDDD;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "•"; /* Punto decorativo */
+    color: #FDC500; /* Amarillo */
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Secciones específicas */
+.contact-info ul,
+.experience ul,
+.skills ul {
+    padding-left: 25px;
+}
+
+.contact-info {
+    margin-bottom: 35px;
+}
+
+.experience,
+.education,
+.skills {
+    margin-bottom: 35px;
+}
+
+.job,
+.degree {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.job p,
+.degree p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #EEEEEE; /* Gris claro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 20px;
+    }
+
+    .cv-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .cv-header p {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    job p,
+    degree p {
+        font-size: 1.1rem;
+    }
+}

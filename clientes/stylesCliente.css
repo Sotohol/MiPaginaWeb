@@ -1,0 +1,153 @@
+/* Variables para el tema Batman */
+:root {
+    --negro: #111111; /* Fondo oscuro */
+    --gris-oscuro: #222222;
+    --gris-medio: #333333;
+    --amarillo: #FDC500; /* Amarillo de Batman */
+    --gris-claro: #EEEEEE;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--negro);
+    color: var(--gris-claro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--gris-oscuro);
+    color: var(--amarillo);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.titulo span {
+    color: var(--amarillo);
+}
+
+.nav-bg {
+    background-color: var(--gris-oscuro);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: var(--gris-claro);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navegacion-principal a:hover {
+    color: var(--amarillo);
+}
+
+.main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-1 {
+    font-size: 2.5rem;
+    color: var(--amarillo);
+}
+
+.imagen img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--amarillo);
+    border-radius: 50%;
+}
+
+form {
+    background-color: var(--gris-oscuro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.pad-legend {
+    padding: 0 10px;
+}
+
+legend {
+    font-size: 1.5rem;
+    color: var(--amarillo);
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.etiqueta {
+    font-size: 1rem;
+    color: var(--gris-claro);
+    margin-bottom: 5px;
+}
+
+.input-text {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input-text:focus {
+    border-color: var(--gris-claro);
+    outline: none;
+}
+
+.boton-margin {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: var(--amarillo);
+    color: var(--gris-oscuro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--gris-claro);
+}

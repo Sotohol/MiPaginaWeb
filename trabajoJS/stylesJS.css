@@ -1,0 +1,258 @@
+:root {
+    --negro: #000000;
+    --navy: #111111; /* Fondo oscuro */
+    --azul1: #201E43; /* Azul oscuro */
+    --blanco: #EEEEEE; /* Gris claro */
+    --amarillo: #FDC500; /* Amarillo */
+}
+
+header.header {
+    background-color: var(--navy);
+    color: var(--amarillo);
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+header.header .name-link {
+    color: var(--amarillo);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+header.header .name-link:hover {
+    color: var(--azul1);
+}
+
+header.header .name-link span {
+    color: var(--azul1);
+}
+
+header.header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Arial', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--navy);
+    margin: 0;
+    padding: 0;
+    color: var(--blanco);
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: auto;
+    padding: 4rem;
+    background-color: var(--azul1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.seccion-imc,
+.seccion-recipientes,
+.seccion-temperaturas {
+    margin-bottom: 4rem;
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo-1,
+.header-1,
+.titulo {
+    font-size: 4rem;
+    color: var(--amarillo);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.titulo-2,
+.head-2 {
+    font-size: 2.2rem;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+}
+
+.variables {
+    font-size: 2rem;
+    color: var(--amarillo);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.seccion-imc .inputs,
+.seccion-recipientes .inputs,
+.seccion-temperaturas {
+    background-color: var(--navy);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.seccion-imc .var-entradas,
+.seccion-recipientes .var-entradas,
+.seccion-temperaturas .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dato {
+    margin-bottom: 2rem;
+}
+
+.dato label {
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+.input-data,
+.select {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    background-color: var(--azul1);
+    color: var(--blanco);
+}
+
+input:disabled {
+    background-color: var(--navy);
+    cursor: not-allowed;
+    color: var(--amarillo);
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--amarillo);
+    color: var(--navy);
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 3rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--azul1);
+    color: var(--blanco);
+    transform: translateY(-5px);
+}
+
+.seccion-temperaturas {
+    background-color: var(--navy);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 50rem;
+    margin: 2rem auto;
+}
+
+.seccion-temperaturas .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.seccion-temperaturas label {
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+.seccion-temperaturas input,
+.seccion-temperaturas select {
+    width: 100%;
+    height: 3.8rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: var(--azul1);
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    color: var(--blanco);
+}
+
+.seccion-temperaturas .boton {
+    background-color: var(--amarillo);
+    color: var(--navy);
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+.seccion-temperaturas .boton:hover {
+    background-color: var(--azul1);
+    color: var(--blanco);
+}
+
+.seccion-temperaturas .dato {
+    margin-bottom: 1.5rem;
+}
+
+.seccion-temperaturas select {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 2.5rem;
+    }
+
+    .titulo-1,
+    .header-1,
+    .titulo {
+        font-size: 3rem;
+    }
+
+    .titulo-2,
+    .head-2 {
+        font-size: 2rem;
+    }
+
+    .boton {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .input-data,
+    .select {
+        font-size: 1.5rem;
+    }
+
+    .seccion-imc .inputs,
+    .seccion-recipientes .inputs,
+    .seccion-temperaturas .form-group {
+        flex-direction: column;
+    }
+
+    .seccion-temperaturas {
+        max-width: 100%;
+    }
+}

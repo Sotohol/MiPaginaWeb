@@ -1,18 +1,12 @@
-/* Estilos generales */
-h1, h2, h3 {
+h1,h2,h3 {
   text-align: center;
-  color: #FDC500; /* Amarillo */
 }
-
 .nav-bg {
-  background-color: #222222; /* Fondo oscuro */
+  background-color: #111111;    
 }
-
 .nav-bg a {
-  color: #FDC500; /* Amarillo */
-  text-decoration: none;
+  color: #FDC500;
 }
-
 .navegacion-principal {
   display: flex;
   flex-direction: column;
@@ -24,20 +18,18 @@ h1, h2, h3 {
       justify-content: space-between;
   }
 }
-
 .navegacion-principal a {
   display: block;
   text-align: center;
-  color: #FDC500; /* Amarillo */
+  color: #FDC500;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 700;
   padding: 1rem;
 }
-
 .navegacion-principal a:hover {
-  background-color: #EEEEEE; /* Gris claro */
-  color: #111111; /* Fondo oscuro */
+  background-color: #EEEEEE;
+  color: #222222;
 }
 
 .flex-container {
@@ -45,11 +37,11 @@ h1, h2, h3 {
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px;
-  background-color: #222222; /* Fondo oscuro */
+  background-color: #EEEEEE;
 }
 
-.flex-container > div {
-  color: #EEEEEE; /* Gris claro */
+.flex-container>div {
+  color: #EEEEEE;
   text-align: center;
   padding: 20px;
   border-radius: 8px;
@@ -58,30 +50,59 @@ h1, h2, h3 {
   justify-content: center;
 }
 
-/* Clases de las cajas */
 .box1 {
-  background-color: #333333; /* Fondo oscuro */
+  background-color: #222222;
   flex: 1 1 100px;
 }
 
-.box2, .box5, .box8 {
-  background-color: #444444; /* Fondo intermedio */
+.box2 {
+  background-color: #111111;
   width: 150px;
   height: 150px;
 }
 
-.box3, .box6, .box9 {
-  background-color: #555555; /* Fondo más claro */
+.box3 {
+  background-color: #333333;
   flex: 0 1 200px;
 }
 
-.box4, .box7, .box10 {
-  background-color: #222222; /* Fondo oscuro */
+.box4 {
+  background-color: #222222;
   flex-basis: 100px;
   flex-grow: 2;
 }
 
-/* Contenedores de ejemplo */
+.box5 {
+  background-color: #111111;
+  align-self: flex-end;
+}
+
+.box6 {
+  background-color: #333333;
+  order: 1;
+}
+
+.box7 {
+  background-color: #222222;
+  width: 50%;
+}
+
+.box8 {
+  background-color: #111111;
+  flex: 1;
+  min-width: 120px;
+}
+
+.box9 {
+  background-color: #333333;
+  height: 200px;
+}
+
+.box10 {
+  background-color: #222222;
+  flex: 0 0 80px;
+}
+
 .container {
   margin: 20px 0;
   display: grid;
@@ -93,42 +114,153 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #EEEEEE; /* Gris claro */
+  color: #EEEEEE;
   font-weight: bold;
 }
 
-/* Ejemplos */
-.example1 .item,
-.example3 .item:nth-child(1),
-.example8 .item {
-  background: #333333; /* Fondo oscuro */
+.example1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
 }
 
-.example2 .item,
-.example6 .item:nth-child(5),
-.example9 .item {
-  background: #444444; /* Fondo intermedio */
-  color: #EEEEEE; /* Gris claro */
+.example1 .item {
+  background: #111111;
 }
 
-.example3 .item,
-.example6 .item:nth-child(1),
+.example2 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+}
+
+.example2 .item {
+  background: #333333;
+  color: #222222;
+}
+
+.example3 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100px 200px 100px;
+}
+
+.example3 .item:nth-child(1) {
+  grid-column: 1 / span 2;
+  background: #222222;
+}
+
+.example3 .item {
+  background: #111111;
+}
+
+.example4 {
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2, 150px);
+  gap: 20px;
+}
+
+.example4 .item {
+  background: #EEEEEE;
+  color: #111111;
+}
+
+.example5 {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.example5 .item {
+  background: #333333;
+  color: #222222;
+  height: 100px;
+}
+
+.example6 {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 200px 100px;
+  gap: 10px;
+}
+
+.example6 .item:nth-child(1) {
+  grid-column: 1 / span 2;
+  background: #222222;
+}
+
+.example6 .item:nth-child(5) {
+  grid-column: 1 / span 2;
+  background: #333333;
+  color: #222222;
+}
+
+.example6 .item {
+  background: #111111;
+}
+
+.example7 {
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 200px 100px;
+  gap: 10px;
+}
+
 .example7 .item:nth-child(1) {
-  background: #555555; /* Fondo más claro */
+  grid-area: header;
+  background: #222222;
 }
 
-.example4 .item,
+.example7 .item:nth-child(2) {
+  grid-area: sidebar;
+  background: #333333;
+  color: #222222;
+}
+
+.example7 .item:nth-child(3) {
+  grid-area: main;
+  background: #111111;
+}
+
 .example7 .item:nth-child(4) {
-  background: #222222; /* Fondo oscuro */
-  color: #FDC500; /* Amarillo */
+  grid-area: footer;
+  background: #EEEEEE;
+  color: #111111;
 }
 
-.example5 .item,
-.example7 .item:nth-child(2),
+.example8 {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.example8 .item {
+  background: #111111;
+  height: 150px;
+}
+
+.example9 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.example9 .item {
+  background: #333333;
+  color: #222222;
+}
+
+.example10 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 10px;
+}
+
 .example10 .item:nth-child(1) {
-  background: rgba(51, 51, 51, 0.8); /* Fondo oscuro con transparencia */
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background: rgba(34, 34, 34, 0.7);
 }
 
 .example10 .item {
-  background: #333333; /* Fondo oscuro */
+  background: #111111;
 }
